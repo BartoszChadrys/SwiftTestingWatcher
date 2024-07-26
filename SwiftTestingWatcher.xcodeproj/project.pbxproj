@@ -17,6 +17,7 @@
 		296624C92C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624C82C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift */; };
 		296624CB2C53A42600F8FBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296624CA2C53A42600F8FBE6 /* Assets.xcassets */; };
 		296624CF2C53A42600F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 296624BF2C53A42500F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		296624D52C53A61300F8FBE6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D42C53A61300F8FBE6 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		296624C82C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestingWatcherWidget.swift; sourceTree = "<group>"; };
 		296624CA2C53A42600F8FBE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		296624CC2C53A42600F8FBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		296624D42C53A61300F8FBE6 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				296624AD2C53A40E00F8FBE6 /* SwiftTestingWatcherApp.swift */,
 				296624AF2C53A40E00F8FBE6 /* ContentView.swift */,
+				296624D42C53A61300F8FBE6 /* Repository.swift */,
 				296624B12C53A40F00F8FBE6 /* Assets.xcassets */,
 				296624B32C53A40F00F8FBE6 /* Preview Content */,
 			);
@@ -239,6 +242,7 @@
 			files = (
 				296624B02C53A40E00F8FBE6 /* ContentView.swift in Sources */,
 				296624AE2C53A40E00F8FBE6 /* SwiftTestingWatcherApp.swift in Sources */,
+				296624D52C53A61300F8FBE6 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
