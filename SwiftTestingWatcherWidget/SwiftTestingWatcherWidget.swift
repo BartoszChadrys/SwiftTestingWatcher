@@ -10,11 +10,11 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> RepoEntry {
-        RepoEntry(date: Date(), repository: .defaultRepository)
+        RepoEntry(date: Date(), repository: .defaultRepository, avatarImageData: Data())
     }
 
     func getSnapshot(in context: Context, completion: @escaping (RepoEntry) -> ()) {
-        let entry = RepoEntry(date: Date(), repository: .defaultRepository)
+        let entry = RepoEntry(date: Date(), repository: .defaultRepository, avatarImageData: Data())
         completion(entry)
     }
 
@@ -24,7 +24,8 @@ struct Provider: TimelineProvider {
 
             do {
                 let repo = try await NetworkManager.shared.getRepo(atUrl: RepoURL.swiftTesting)
-                let entry = RepoEntry(date: .now, repository: repo)
+                let avatarData = await NetworkManager.shared.getImage(from: repo.owner.avatarUrl)
+                let entry = RepoEntry(date: .now, repository: repo, avatarImageData: avatarData ?? Data())
                 let timeline = Timeline(entries: [entry], policy: .after(nextUpdateDate))
                 completion(timeline)
             } catch {
@@ -37,6 +38,7 @@ struct Provider: TimelineProvider {
 struct RepoEntry: TimelineEntry {
     let date: Date
     let repository: Repository
+    let avatarImageData: Data
 }
 
 struct SwiftTestingWatcherWidgetEntryView : View {
@@ -45,15 +47,17 @@ struct SwiftTestingWatcherWidgetEntryView : View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                HStack {
-                    Circle()
-                        .frame(width: 50, height: 50)
-                    
+                Label {
                     Text(entry.repository.name)
                         .font(.title2)
                         .fontWeight(.semibold)
                         .minimumScaleFactor(0.6)
                         .lineLimit(1)
+                } icon: {
+                    Image(uiImage: UIImage(data: entry.avatarImageData) ?? UIImage(named: "avatar")!)
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .clipShape(Circle())
                 }
                 .padding(.bottom, 8)
                 
@@ -110,7 +114,7 @@ struct SwiftTestingWatcherWidget: Widget {
 #Preview(as: .systemMedium) {
     SwiftTestingWatcherWidget()
 } timeline: {
-    RepoEntry(date: Date(), repository: .defaultRepository)
+    RepoEntry(date: Date(), repository: .defaultRepository, avatarImageData: Data())
 }
 
 
