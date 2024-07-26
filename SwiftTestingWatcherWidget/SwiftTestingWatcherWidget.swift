@@ -43,12 +43,41 @@ struct SwiftTestingWatcherWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.emoji)
+        HStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    Circle()
+                        .frame(width: 50, height: 50)
+                    
+                    Text("swift-testing")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .minimumScaleFactor(0.6)
+                        .lineLimit(1)
+                }
+                .padding(.bottom, 8)
+                
+                HStack {
+                    StatLabel(value: 999, imageName: "star.fill")
+                    StatLabel(value: 999, imageName: "tuningfork")
+                    StatLabel(value: 999, imageName: "exclamationmark.triangle.fill")
+                }
+            }
+            
+            Spacer()
+            
+            VStack {
+                Text("99")
+                    .font(.system(size: 70))
+                    .frame(width: 90)
+                    .minimumScaleFactor(0.6)
+                    .lineLimit(1)
+                    .fontWeight(.bold)
+                
+                Text("days ago")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
         }
     }
 }
@@ -69,12 +98,30 @@ struct SwiftTestingWatcherWidget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
+        .supportedFamilies([.systemMedium])
     }
 }
 
-#Preview(as: .systemSmall) {
+#Preview(as: .systemMedium) {
     SwiftTestingWatcherWidget()
 } timeline: {
     SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
 }
+
+
+private struct StatLabel: View {
+    let value: Int
+    let imageName: String
+    
+    var body: some View {
+        Label {
+            Text("\(value)")
+                .font(.footnote)
+        } icon: {
+            Image(systemName: imageName)
+                .foregroundStyle(.green)
+        }
+        .fontWeight(.medium)
+    }
+}
+
