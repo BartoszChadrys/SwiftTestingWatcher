@@ -14,7 +14,17 @@ struct Repository: Decodable {
     let forks: Int
     let watchers: Int
     let openIssues: Int
-    let pushedAt: String
+    let pushedAt: Date
+    
+    static let defaultRepository = Repository(
+        name: "swift-testing",
+        owner: Owner(avatarUrl: ""),
+        hasIssues: true,
+        forks: 56,
+        watchers: 72,
+        openIssues: 30,
+        pushedAt: Calendar.current.date(from: DateComponents(year: 2023, month: 7, day: 24)) ?? .now
+    )
 }
 
 struct Owner: Decodable {

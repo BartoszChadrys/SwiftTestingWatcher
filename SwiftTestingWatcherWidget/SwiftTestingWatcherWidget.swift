@@ -9,38 +9,38 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), emoji: "😀")
+    func placeholder(in context: Context) -> RepoEntry {
+        RepoEntry(date: Date(), repository: .defaultRepository)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), emoji: "😀")
+    func getSnapshot(in context: Context, completion: @escaping (RepoEntry) -> ()) {
+        let entry = RepoEntry(date: Date(), repository: .defaultRepository)
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        Task {
+            let nextUpdateDate = Date().addingTimeInterval(3600 * 12) // 12 hours
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, emoji: "😀")
-            entries.append(entry)
+            do {
+                let repo = try await NetworkManager.shared.getRepo(atUrl: RepoURL.swiftTesting)
+                let entry = RepoEntry(date: .now, repository: repo)
+                let timeline = Timeline(entries: [entry], policy: .after(nextUpdateDate))
+                completion(timeline)
+            } catch {
+                print("❌ Error - \(error.localizedDescription)")
+            }
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
     }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct RepoEntry: TimelineEntry {
     let date: Date
-    let emoji: String
+    let repository: Repository
 }
 
 struct SwiftTestingWatcherWidgetEntryView : View {
-    var entry: Provider.Entry
+    var entry: RepoEntry
 
     var body: some View {
         HStack {
@@ -49,7 +49,7 @@ struct SwiftTestingWatcherWidgetEntryView : View {
                     Circle()
                         .frame(width: 50, height: 50)
                     
-                    Text("swift-testing")
+                    Text(entry.repository.name)
                         .font(.title2)
                         .fontWeight(.semibold)
                         .minimumScaleFactor(0.6)
@@ -58,27 +58,32 @@ struct SwiftTestingWatcherWidgetEntryView : View {
                 .padding(.bottom, 8)
                 
                 HStack {
-                    StatLabel(value: 999, imageName: "star.fill")
-                    StatLabel(value: 999, imageName: "tuningfork")
-                    StatLabel(value: 999, imageName: "exclamationmark.triangle.fill")
+                    StatLabel(value: entry.repository.watchers, imageName: "star.fill")
+                    StatLabel(value: entry.repository.forks, imageName: "tuningfork")
+                    StatLabel(value: entry.repository.openIssues, imageName: "exclamationmark.triangle.fill")
                 }
             }
             
             Spacer()
             
             VStack {
-                Text("99")
+                Text("\(daysSinceLastActivity)")
                     .font(.system(size: 70))
                     .frame(width: 90)
                     .minimumScaleFactor(0.6)
                     .lineLimit(1)
                     .fontWeight(.bold)
+                    .foregroundStyle(daysSinceLastActivity > 50 ? .red.opacity(0.85) : .green)
                 
                 Text("days ago")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }
         }
+    }
+    
+    var daysSinceLastActivity: Int {
+        Calendar.current.dateComponents([.day], from: entry.repository.pushedAt, to: .now).day ?? 0
     }
 }
 
@@ -105,7 +110,7 @@ struct SwiftTestingWatcherWidget: Widget {
 #Preview(as: .systemMedium) {
     SwiftTestingWatcherWidget()
 } timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
+    RepoEntry(date: Date(), repository: .defaultRepository)
 }
 
 

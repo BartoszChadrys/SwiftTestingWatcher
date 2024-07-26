@@ -18,6 +18,9 @@
 		296624CB2C53A42600F8FBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296624CA2C53A42600F8FBE6 /* Assets.xcassets */; };
 		296624CF2C53A42600F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 296624BF2C53A42500F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		296624D52C53A61300F8FBE6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D42C53A61300F8FBE6 /* Repository.swift */; };
+		296624D72C53AADC00F8FBE6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D42C53A61300F8FBE6 /* Repository.swift */; };
+		296624D92C53C78600F8FBE6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D82C53C78600F8FBE6 /* NetworkManager.swift */; };
+		296624DA2C53C78600F8FBE6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D82C53C78600F8FBE6 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,7 @@
 		296624CA2C53A42600F8FBE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		296624CC2C53A42600F8FBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		296624D42C53A61300F8FBE6 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		296624D82C53C78600F8FBE6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 				296624D42C53A61300F8FBE6 /* Repository.swift */,
 				296624B12C53A40F00F8FBE6 /* Assets.xcassets */,
 				296624B32C53A40F00F8FBE6 /* Preview Content */,
+				296624D82C53C78600F8FBE6 /* NetworkManager.swift */,
 			);
 			path = SwiftTestingWatcher;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296624D92C53C78600F8FBE6 /* NetworkManager.swift in Sources */,
 				296624B02C53A40E00F8FBE6 /* ContentView.swift in Sources */,
 				296624AE2C53A40E00F8FBE6 /* SwiftTestingWatcherApp.swift in Sources */,
 				296624D52C53A61300F8FBE6 /* Repository.swift in Sources */,
@@ -250,8 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296624DA2C53C78600F8FBE6 /* NetworkManager.swift in Sources */,
 				296624C72C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift in Sources */,
 				296624C92C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift in Sources */,
+				296624D72C53AADC00F8FBE6 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
