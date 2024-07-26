@@ -11,7 +11,37 @@
 		296624B02C53A40E00F8FBE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624AF2C53A40E00F8FBE6 /* ContentView.swift */; };
 		296624B22C53A40F00F8FBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296624B12C53A40F00F8FBE6 /* Assets.xcassets */; };
 		296624B52C53A40F00F8FBE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296624B42C53A40F00F8FBE6 /* Preview Assets.xcassets */; };
+		296624C22C53A42500F8FBE6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296624C12C53A42500F8FBE6 /* WidgetKit.framework */; };
+		296624C42C53A42500F8FBE6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296624C32C53A42500F8FBE6 /* SwiftUI.framework */; };
+		296624C72C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624C62C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift */; };
+		296624C92C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624C82C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift */; };
+		296624CB2C53A42600F8FBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296624CA2C53A42600F8FBE6 /* Assets.xcassets */; };
+		296624CF2C53A42600F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 296624BF2C53A42500F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		296624CD2C53A42600F8FBE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 296624A22C53A40E00F8FBE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 296624BE2C53A42500F8FBE6;
+			remoteInfo = SwiftTestingWatcherWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		296624D32C53A42600F8FBE6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				296624CF2C53A42600F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		296624AA2C53A40E00F8FBE6 /* SwiftTestingWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTestingWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +49,13 @@
 		296624AF2C53A40E00F8FBE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		296624B12C53A40F00F8FBE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		296624B42C53A40F00F8FBE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		296624BF2C53A42500F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftTestingWatcherWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		296624C12C53A42500F8FBE6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		296624C32C53A42500F8FBE6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		296624C62C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestingWatcherWidgetBundle.swift; sourceTree = "<group>"; };
+		296624C82C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestingWatcherWidget.swift; sourceTree = "<group>"; };
+		296624CA2C53A42600F8FBE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		296624CC2C53A42600F8FBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +66,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		296624BC2C53A42500F8FBE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				296624C42C53A42500F8FBE6 /* SwiftUI.framework in Frameworks */,
+				296624C22C53A42500F8FBE6 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				296624AC2C53A40E00F8FBE6 /* SwiftTestingWatcher */,
+				296624C52C53A42500F8FBE6 /* SwiftTestingWatcherWidget */,
+				296624C02C53A42500F8FBE6 /* Frameworks */,
 				296624AB2C53A40E00F8FBE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				296624AA2C53A40E00F8FBE6 /* SwiftTestingWatcher.app */,
+				296624BF2C53A42500F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +116,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		296624C02C53A42500F8FBE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				296624C12C53A42500F8FBE6 /* WidgetKit.framework */,
+				296624C32C53A42500F8FBE6 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		296624C52C53A42500F8FBE6 /* SwiftTestingWatcherWidget */ = {
+			isa = PBXGroup;
+			children = (
+				296624C62C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift */,
+				296624C82C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift */,
+				296624CA2C53A42600F8FBE6 /* Assets.xcassets */,
+				296624CC2C53A42600F8FBE6 /* Info.plist */,
+			);
+			path = SwiftTestingWatcherWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +146,34 @@
 				296624A62C53A40E00F8FBE6 /* Sources */,
 				296624A72C53A40E00F8FBE6 /* Frameworks */,
 				296624A82C53A40E00F8FBE6 /* Resources */,
+				296624D32C53A42600F8FBE6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				296624CE2C53A42600F8FBE6 /* PBXTargetDependency */,
 			);
 			name = SwiftTestingWatcher;
 			productName = SwiftTestingWatcher;
 			productReference = 296624AA2C53A40E00F8FBE6 /* SwiftTestingWatcher.app */;
 			productType = "com.apple.product-type.application";
+		};
+		296624BE2C53A42500F8FBE6 /* SwiftTestingWatcherWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 296624D02C53A42600F8FBE6 /* Build configuration list for PBXNativeTarget "SwiftTestingWatcherWidgetExtension" */;
+			buildPhases = (
+				296624BB2C53A42500F8FBE6 /* Sources */,
+				296624BC2C53A42500F8FBE6 /* Frameworks */,
+				296624BD2C53A42500F8FBE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftTestingWatcherWidgetExtension;
+			productName = SwiftTestingWatcherWidgetExtension;
+			productReference = 296624BF2C53A42500F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +186,9 @@
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					296624A92C53A40E00F8FBE6 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					296624BE2C53A42500F8FBE6 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -116,6 +207,7 @@
 			projectRoot = "";
 			targets = (
 				296624A92C53A40E00F8FBE6 /* SwiftTestingWatcher */,
+				296624BE2C53A42500F8FBE6 /* SwiftTestingWatcherWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +219,14 @@
 			files = (
 				296624B52C53A40F00F8FBE6 /* Preview Assets.xcassets in Resources */,
 				296624B22C53A40F00F8FBE6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		296624BD2C53A42500F8FBE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				296624CB2C53A42600F8FBE6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +242,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		296624BB2C53A42500F8FBE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				296624C72C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift in Sources */,
+				296624C92C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		296624CE2C53A42600F8FBE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 296624BE2C53A42500F8FBE6 /* SwiftTestingWatcherWidgetExtension */;
+			targetProxy = 296624CD2C53A42600F8FBE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		296624B62C53A40F00F8FBE6 /* Debug */ = {
@@ -267,6 +384,7 @@
 		296624B92C53A40F00F8FBE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +414,7 @@
 		296624BA2C53A40F00F8FBE6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -322,6 +441,60 @@
 			};
 			name = Release;
 		};
+		296624D12C53A42600F8FBE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9HK4TRLPGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftTestingWatcherWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SwiftTestingWatcherWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartosz.chadrys.SwiftTestingWatcher.SwiftTestingWatcherWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		296624D22C53A42600F8FBE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9HK4TRLPGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftTestingWatcherWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SwiftTestingWatcherWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartosz.chadrys.SwiftTestingWatcher.SwiftTestingWatcherWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,6 +512,15 @@
 			buildConfigurations = (
 				296624B92C53A40F00F8FBE6 /* Debug */,
 				296624BA2C53A40F00F8FBE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		296624D02C53A42600F8FBE6 /* Build configuration list for PBXNativeTarget "SwiftTestingWatcherWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				296624D12C53A42600F8FBE6 /* Debug */,
+				296624D22C53A42600F8FBE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
