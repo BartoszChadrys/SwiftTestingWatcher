@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Repository: Decodable {
+struct Repository {
     let name: String
     let owner: Owner
     let hasIssues: Bool
@@ -15,6 +15,7 @@ struct Repository: Decodable {
     let watchers: Int
     let openIssues: Int
     let pushedAt: Date
+    var avatarData: Data
     
     static let defaultRepository = Repository(
         name: "swift-testing",
@@ -23,8 +24,34 @@ struct Repository: Decodable {
         forks: 56,
         watchers: 72,
         openIssues: 30,
-        pushedAt: Calendar.current.date(from: DateComponents(year: 2023, month: 7, day: 24)) ?? .now
+        pushedAt: Calendar.current.date(from: DateComponents(year: 2024, month: 7, day: 24)) ?? .now,
+        avatarData: Data()
     )
+}
+
+extension Repository {
+    struct CodingData: Decodable {
+        let name: String
+        let owner: Owner
+        let hasIssues: Bool
+        let forks: Int
+        let watchers: Int
+        let openIssues: Int
+        let pushedAt: Date
+        
+        var repo: Repository {
+            Repository(
+                name: name,
+                owner: owner,
+                hasIssues: hasIssues,
+                forks: forks,
+                watchers: watchers,
+                openIssues: openIssues,
+                pushedAt: pushedAt,
+                avatarData: Data()
+            )
+        }
+    }
 }
 
 struct Owner: Decodable {

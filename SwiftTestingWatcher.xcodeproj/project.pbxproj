@@ -21,6 +21,7 @@
 		296624D72C53AADC00F8FBE6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D42C53A61300F8FBE6 /* Repository.swift */; };
 		296624D92C53C78600F8FBE6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D82C53C78600F8FBE6 /* NetworkManager.swift */; };
 		296624DA2C53C78600F8FBE6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D82C53C78600F8FBE6 /* NetworkManager.swift */; };
+		2978AC142C53E8B300CAE62C /* SwiftTestingMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		296624CC2C53A42600F8FBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		296624D42C53A61300F8FBE6 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		296624D82C53C78600F8FBE6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestingMediumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				296624C82C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift */,
 				296624CA2C53A42600F8FBE6 /* Assets.xcassets */,
 				296624CC2C53A42600F8FBE6 /* Info.plist */,
+				2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */,
 			);
 			path = SwiftTestingWatcherWidget;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2978AC142C53E8B300CAE62C /* SwiftTestingMediumView.swift in Sources */,
 				296624DA2C53C78600F8FBE6 /* NetworkManager.swift in Sources */,
 				296624C72C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift in Sources */,
 				296624C92C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift in Sources */,
