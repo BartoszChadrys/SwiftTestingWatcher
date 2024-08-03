@@ -37,6 +37,8 @@ struct ContributorsMediumView: View {
                             Text("\(contributor.contributions)")
                                 .font(.caption2)
                                 .foregroundStyle(.secondary)
+                                .id(repository.name)
+                                .transition(.push(from: .trailing))
                         }
                     }
                 }
@@ -49,4 +51,5 @@ struct ContributorsMediumView: View {
     ContributorsRepoWidget()
 } timeline: {
     ContributorsEntry(date: .now, repository: .defaultRepository)
+    ContributorsEntry(date: .now, repository: .defaultRepositoryV2)
 }

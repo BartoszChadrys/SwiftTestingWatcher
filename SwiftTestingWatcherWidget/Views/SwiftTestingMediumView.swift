@@ -47,6 +47,7 @@ struct SwiftTestingMediumView: View {
                     .lineLimit(1)
                     .fontWeight(.bold)
                     .foregroundStyle(daysSinceLastActivity > 50 ? .red.opacity(0.85) : .green)
+                    .contentTransition(.numericText())
                 
                 Text("days ago")
                     .font(.subheadline)
@@ -64,6 +65,7 @@ struct SwiftTestingMediumView: View {
     CompactRepoWidget()
 } timeline: {
     CompactRepoEntry(date: Date(), repository: .defaultRepository)
+    CompactRepoEntry(date: Date(), repository: .defaultRepositoryV2)
 }
 
 private struct StatLabel: View {
@@ -74,6 +76,7 @@ private struct StatLabel: View {
         Label {
             Text("\(value)")
                 .font(.footnote)
+                .contentTransition(.numericText())
         } icon: {
             Image(systemName: imageName)
                 .foregroundStyle(.green)

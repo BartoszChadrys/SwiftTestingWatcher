@@ -25,13 +25,30 @@ struct Repository {
         forks: 56,
         watchers: 72,
         openIssues: 30,
-        pushedAt: Calendar.current.date(from: DateComponents(year: 2024, month: 7, day: 24)) ?? .now,
+        pushedAt: Calendar.current.date(from: DateComponents(year: 2024, month: 4, day: 26)) ?? .now,
         avatarData: Data(),
         contributors: [
             Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 87, avatarData: Data()),
             Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 63, avatarData: Data()),
             Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 54, avatarData: Data()),
             Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 36, avatarData: Data())
+        ]
+    )
+    
+    static let defaultRepositoryV2 = Repository(
+        name: "swift-testing",
+        owner: Owner(avatarUrl: ""),
+        hasIssues: true,
+        forks: 78,
+        watchers: 90,
+        openIssues: 50,
+        pushedAt: Calendar.current.date(from: DateComponents(year: 2024, month: 7, day: 24)) ?? .now,
+        avatarData: Data(),
+        contributors: [
+            Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 100, avatarData: Data()),
+            Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 78, avatarData: Data()),
+            Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 68, avatarData: Data()),
+            Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 52, avatarData: Data())
         ]
     )
 }
