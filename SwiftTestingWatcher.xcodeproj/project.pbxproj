@@ -23,6 +23,7 @@
 		296B93702C56B8FF002CA103 /* ContributorsRepoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B936F2C56B8FF002CA103 /* ContributorsRepoWidget.swift */; };
 		2978AC142C53E8B300CAE62C /* SwiftTestingMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */; };
 		2978AC152C56B84600CAE62C /* CompactRepoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624C82C53A42500F8FBE6 /* CompactRepoWidget.swift */; };
+		298DB19D2C5E3E3300006D12 /* ContributorsMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298DB19B2C5E3E3000006D12 /* ContributorsMediumView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		296624D82C53C78600F8FBE6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		296B936F2C56B8FF002CA103 /* ContributorsRepoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsRepoWidget.swift; sourceTree = "<group>"; };
 		2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestingMediumView.swift; sourceTree = "<group>"; };
+		298DB19B2C5E3E3000006D12 /* ContributorsMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsMediumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			children = (
 				296624C62C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift */,
 				2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */,
+				298DB19B2C5E3E3000006D12 /* ContributorsMediumView.swift */,
 				296624C82C53A42500F8FBE6 /* CompactRepoWidget.swift */,
 				296B936F2C56B8FF002CA103 /* ContributorsRepoWidget.swift */,
 				296624CA2C53A42600F8FBE6 /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 				296B93702C56B8FF002CA103 /* ContributorsRepoWidget.swift in Sources */,
 				2978AC142C53E8B300CAE62C /* SwiftTestingMediumView.swift in Sources */,
 				296624DA2C53C78600F8FBE6 /* NetworkManager.swift in Sources */,
+				298DB19D2C5E3E3300006D12 /* ContributorsMediumView.swift in Sources */,
 				296624C72C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift in Sources */,
 				296624D72C53AADC00F8FBE6 /* Repository.swift in Sources */,
 			);

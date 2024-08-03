@@ -10,16 +10,16 @@ import SwiftUI
 
 struct ContributorsProvider: TimelineProvider {
     func placeholder(in context: Context) -> ContributorsEntry {
-        ContributorsEntry(date: .now)
+        ContributorsEntry(date: .now, repository: .defaultRepository)
     }
     
     func getSnapshot(in context: Context, completion: @escaping (ContributorsEntry) -> Void) {
-        let entry = ContributorsEntry(date: .now)
+        let entry = ContributorsEntry(date: .now, repository: .defaultRepository)
         completion(entry)
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<ContributorsEntry>) -> Void) {
-        let entry = ContributorsEntry(date: .now)
+        let entry = ContributorsEntry(date: .now, repository: .defaultRepository)
         let nextUpdateDate = Date().addingTimeInterval(3600 * 12) // 12 hours
         let timeline = Timeline(entries: [entry], policy: .after(nextUpdateDate))
         completion(timeline)
@@ -28,13 +28,17 @@ struct ContributorsProvider: TimelineProvider {
 
 struct ContributorsEntry: TimelineEntry {
     var date: Date
+    let repository: Repository
 }
 
 struct ContributorsRepoEntryView : View {
     var entry: ContributorsEntry
 
     var body: some View {
-        Text(entry.date.formatted())
+        VStack(spacing: 24) {
+            SwiftTestingMediumView(repository: entry.repository)
+            ContributorsMediumView()
+        }
     }
 }
 
@@ -60,8 +64,8 @@ public struct ContributorsRepoWidget: Widget {
     }
 }
 
-#Preview(as: .systemMedium) {
+#Preview(as: .systemLarge) {
     ContributorsRepoWidget()
 } timeline: {
-    ContributorsEntry(date: Date())
+    ContributorsEntry(date: Date(), repository: .defaultRepository)
 }
