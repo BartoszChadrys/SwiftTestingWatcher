@@ -14,14 +14,15 @@
 		296624C22C53A42500F8FBE6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296624C12C53A42500F8FBE6 /* WidgetKit.framework */; };
 		296624C42C53A42500F8FBE6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296624C32C53A42500F8FBE6 /* SwiftUI.framework */; };
 		296624C72C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624C62C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift */; };
-		296624C92C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624C82C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift */; };
 		296624CB2C53A42600F8FBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296624CA2C53A42600F8FBE6 /* Assets.xcassets */; };
 		296624CF2C53A42600F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 296624BF2C53A42500F8FBE6 /* SwiftTestingWatcherWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		296624D52C53A61300F8FBE6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D42C53A61300F8FBE6 /* Repository.swift */; };
 		296624D72C53AADC00F8FBE6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D42C53A61300F8FBE6 /* Repository.swift */; };
 		296624D92C53C78600F8FBE6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D82C53C78600F8FBE6 /* NetworkManager.swift */; };
 		296624DA2C53C78600F8FBE6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624D82C53C78600F8FBE6 /* NetworkManager.swift */; };
+		296B93702C56B8FF002CA103 /* ContributorsRepoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B936F2C56B8FF002CA103 /* ContributorsRepoWidget.swift */; };
 		2978AC142C53E8B300CAE62C /* SwiftTestingMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */; };
+		2978AC152C56B84600CAE62C /* CompactRepoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624C82C53A42500F8FBE6 /* CompactRepoWidget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +59,12 @@
 		296624C12C53A42500F8FBE6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		296624C32C53A42500F8FBE6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		296624C62C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestingWatcherWidgetBundle.swift; sourceTree = "<group>"; };
-		296624C82C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestingWatcherWidget.swift; sourceTree = "<group>"; };
+		296624C82C53A42500F8FBE6 /* CompactRepoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactRepoWidget.swift; sourceTree = "<group>"; };
 		296624CA2C53A42600F8FBE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		296624CC2C53A42600F8FBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		296624D42C53A61300F8FBE6 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		296624D82C53C78600F8FBE6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		296B936F2C56B8FF002CA103 /* ContributorsRepoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsRepoWidget.swift; sourceTree = "<group>"; };
 		2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestingMediumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,10 +141,11 @@
 			isa = PBXGroup;
 			children = (
 				296624C62C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift */,
-				296624C82C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift */,
+				2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */,
+				296624C82C53A42500F8FBE6 /* CompactRepoWidget.swift */,
+				296B936F2C56B8FF002CA103 /* ContributorsRepoWidget.swift */,
 				296624CA2C53A42600F8FBE6 /* Assets.xcassets */,
 				296624CC2C53A42600F8FBE6 /* Info.plist */,
-				2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */,
 			);
 			path = SwiftTestingWatcherWidget;
 			sourceTree = "<group>";
@@ -259,10 +262,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2978AC152C56B84600CAE62C /* CompactRepoWidget.swift in Sources */,
+				296B93702C56B8FF002CA103 /* ContributorsRepoWidget.swift in Sources */,
 				2978AC142C53E8B300CAE62C /* SwiftTestingMediumView.swift in Sources */,
 				296624DA2C53C78600F8FBE6 /* NetworkManager.swift in Sources */,
 				296624C72C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift in Sources */,
-				296624C92C53A42500F8FBE6 /* SwiftTestingWatcherWidget.swift in Sources */,
 				296624D72C53AADC00F8FBE6 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

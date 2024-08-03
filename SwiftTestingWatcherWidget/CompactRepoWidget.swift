@@ -8,13 +8,13 @@
 import WidgetKit
 import SwiftUI
 
-struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> RepoEntry {
-        RepoEntry(date: Date(), repository: .defaultRepository)
+struct CompactRepoProvider: TimelineProvider {
+    func placeholder(in context: Context) -> CompactRepoEntry {
+        CompactRepoEntry(date: Date(), repository: .defaultRepository)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (RepoEntry) -> ()) {
-        let entry = RepoEntry(date: Date(), repository: .defaultRepository)
+    func getSnapshot(in context: Context, completion: @escaping (CompactRepoEntry) -> ()) {
+        let entry = CompactRepoEntry(date: Date(), repository: .defaultRepository)
         completion(entry)
     }
 
@@ -26,7 +26,7 @@ struct Provider: TimelineProvider {
                 var repo = try await NetworkManager.shared.getRepo(atUrl: RepoURL.swiftTesting)
                 let avatarData = await NetworkManager.shared.getImage(from: repo.owner.avatarUrl)
                 repo.avatarData = avatarData ?? Data()
-                let entry = RepoEntry(date: .now, repository: repo)
+                let entry = CompactRepoEntry(date: .now, repository: repo)
                 let timeline = Timeline(entries: [entry], policy: .after(nextUpdateDate))
                 completion(timeline)
             } catch {
@@ -36,14 +36,14 @@ struct Provider: TimelineProvider {
     }
 }
 
-struct RepoEntry: TimelineEntry {
+struct CompactRepoEntry: TimelineEntry {
     let date: Date
     let repository: Repository
 }
 
-struct SwiftTestingWatcherWidgetEntryView : View {
+struct CompactRepoEntryView : View {
     @Environment(\.widgetFamily) var widgetFamily
-    var entry: RepoEntry
+    var entry: CompactRepoEntry
 
     var body: some View {
         switch widgetFamily {
@@ -58,30 +58,30 @@ struct SwiftTestingWatcherWidgetEntryView : View {
     }
 }
 
-public struct SwiftTestingWatcherWidget: Widget {
-    let kind: String = "SwiftTestingWatcherWidget"
+public struct CompactRepoWidget: Widget {
+    let kind: String = "CompactRepoWidget"
 
     public init() {}
     
     public var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+        StaticConfiguration(kind: kind, provider: CompactRepoProvider()) { entry in
             if #available(iOS 17.0, *) {
-                SwiftTestingWatcherWidgetEntryView(entry: entry)
+                CompactRepoEntryView(entry: entry)
                     .containerBackground(.fill.tertiary, for: .widget)
             } else {
-                SwiftTestingWatcherWidgetEntryView(entry: entry)
+                CompactRepoEntryView(entry: entry)
                     .padding()
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
-        .supportedFamilies([.systemMedium, .systemLarge])
+        .configurationDisplayName("Compact Repo Widget")
+        .description("Keep an eye on your repo stats!")
+        .supportedFamilies([.systemMedium])
     }
 }
 
 #Preview(as: .systemMedium) {
-    SwiftTestingWatcherWidget()
+    CompactRepoWidget()
 } timeline: {
-    RepoEntry(date: Date(), repository: .defaultRepository)
+    CompactRepoEntry(date: Date(), repository: .defaultRepository)
 }

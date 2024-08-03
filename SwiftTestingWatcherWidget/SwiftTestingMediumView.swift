@@ -61,9 +61,9 @@ struct SwiftTestingMediumView: View {
 }
 
 #Preview(as: .systemMedium) {
-    SwiftTestingWatcherWidget()
+    CompactRepoWidget()
 } timeline: {
-    RepoEntry(date: Date(), repository: .defaultRepository)
+    CompactRepoEntry(date: Date(), repository: .defaultRepository)
 }
 
 private struct StatLabel: View {
