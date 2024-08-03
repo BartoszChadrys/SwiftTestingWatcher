@@ -10,6 +10,8 @@ import SwiftUI
 import WidgetKit
 
 struct ContributorsMediumView: View {
+    let repository: Repository
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Top Contributors")
@@ -21,18 +23,18 @@ struct ContributorsMediumView: View {
                       alignment: .leading,
                       spacing: 20
             ) {
-                ForEach(0..<4) { i in
+                ForEach(repository.contributors) { contributor in
                     HStack {
-                        Image(uiImage: UIImage(named: "avatar")!)
+                        Image(uiImage: UIImage(data: contributor.avatarData) ?? UIImage(named: "avatar")!)
                             .resizable()
                             .frame(width: 45, height: 45)
                             .clipShape(Circle())
                         
                         VStack(alignment: .leading) {
-                            Text("Bartosz Chadryś")
+                            Text(contributor.login)
                                 .font(.caption)
                                 .minimumScaleFactor(0.7)
-                            Text("42")
+                            Text("\(contributor.contributions)")
                                 .font(.caption2)
                                 .foregroundStyle(.secondary)
                         }

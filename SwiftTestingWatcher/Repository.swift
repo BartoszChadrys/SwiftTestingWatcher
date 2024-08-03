@@ -16,6 +16,7 @@ struct Repository {
     let openIssues: Int
     let pushedAt: Date
     var avatarData: Data
+    var contributors = [Contributor]()
     
     static let defaultRepository = Repository(
         name: "swift-testing",

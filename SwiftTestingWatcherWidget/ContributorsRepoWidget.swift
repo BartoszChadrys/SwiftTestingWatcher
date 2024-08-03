@@ -37,7 +37,7 @@ struct ContributorsRepoEntryView : View {
     var body: some View {
         VStack(spacing: 24) {
             SwiftTestingMediumView(repository: entry.repository)
-            ContributorsMediumView()
+            ContributorsMediumView(repository: entry.repository)
         }
     }
 }

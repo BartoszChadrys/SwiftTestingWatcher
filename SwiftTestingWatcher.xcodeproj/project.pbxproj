@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		291CA9252C5E426E00F21624 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291CA9242C5E426E00F21624 /* Contributor.swift */; };
+		291CA9262C5E426E00F21624 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291CA9242C5E426E00F21624 /* Contributor.swift */; };
 		296624AE2C53A40E00F8FBE6 /* SwiftTestingWatcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624AD2C53A40E00F8FBE6 /* SwiftTestingWatcherApp.swift */; };
 		296624B02C53A40E00F8FBE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296624AF2C53A40E00F8FBE6 /* ContentView.swift */; };
 		296624B22C53A40F00F8FBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296624B12C53A40F00F8FBE6 /* Assets.xcassets */; };
@@ -51,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		291CA9242C5E426E00F21624 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		296624AA2C53A40E00F8FBE6 /* SwiftTestingWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTestingWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296624AD2C53A40E00F8FBE6 /* SwiftTestingWatcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestingWatcherApp.swift; sourceTree = "<group>"; };
 		296624AF2C53A40E00F8FBE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 				296624AD2C53A40E00F8FBE6 /* SwiftTestingWatcherApp.swift */,
 				296624AF2C53A40E00F8FBE6 /* ContentView.swift */,
 				296624D42C53A61300F8FBE6 /* Repository.swift */,
+				291CA9242C5E426E00F21624 /* Contributor.swift */,
 				296624B12C53A40F00F8FBE6 /* Assets.xcassets */,
 				296624B32C53A40F00F8FBE6 /* Preview Content */,
 				296624D82C53C78600F8FBE6 /* NetworkManager.swift */,
@@ -255,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				296624D92C53C78600F8FBE6 /* NetworkManager.swift in Sources */,
+				291CA9252C5E426E00F21624 /* Contributor.swift in Sources */,
 				296624B02C53A40E00F8FBE6 /* ContentView.swift in Sources */,
 				296624AE2C53A40E00F8FBE6 /* SwiftTestingWatcherApp.swift in Sources */,
 				296624D52C53A61300F8FBE6 /* Repository.swift in Sources */,
@@ -272,6 +277,7 @@
 				298DB19D2C5E3E3300006D12 /* ContributorsMediumView.swift in Sources */,
 				296624C72C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift in Sources */,
 				296624D72C53AADC00F8FBE6 /* Repository.swift in Sources */,
+				291CA9262C5E426E00F21624 /* Contributor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
