@@ -26,7 +26,13 @@ struct Repository {
         watchers: 72,
         openIssues: 30,
         pushedAt: Calendar.current.date(from: DateComponents(year: 2024, month: 7, day: 24)) ?? .now,
-        avatarData: Data()
+        avatarData: Data(),
+        contributors: [
+            Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 87, avatarData: Data()),
+            Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 63, avatarData: Data()),
+            Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 54, avatarData: Data()),
+            Contributor(login: "Bartosz Chadrys", avatarUrl: "", contributions: 36, avatarData: Data())
+        ]
     )
 }
 

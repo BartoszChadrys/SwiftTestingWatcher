@@ -93,6 +93,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		291CA9272C5E52CC00F21624 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				296B936F2C56B8FF002CA103 /* ContributorsRepoWidget.swift */,
+				296624C82C53A42500F8FBE6 /* CompactRepoWidget.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		291CA9282C5E52D900F21624 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */,
+				298DB19B2C5E3E3000006D12 /* ContributorsMediumView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		291CA9292C5E52E200F21624 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				291CA9242C5E426E00F21624 /* Contributor.swift */,
+				296624D42C53A61300F8FBE6 /* Repository.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		296624A12C53A40E00F8FBE6 = {
 			isa = PBXGroup;
 			children = (
@@ -115,10 +142,9 @@
 		296624AC2C53A40E00F8FBE6 /* SwiftTestingWatcher */ = {
 			isa = PBXGroup;
 			children = (
+				291CA9292C5E52E200F21624 /* Models */,
 				296624AD2C53A40E00F8FBE6 /* SwiftTestingWatcherApp.swift */,
 				296624AF2C53A40E00F8FBE6 /* ContentView.swift */,
-				296624D42C53A61300F8FBE6 /* Repository.swift */,
-				291CA9242C5E426E00F21624 /* Contributor.swift */,
 				296624B12C53A40F00F8FBE6 /* Assets.xcassets */,
 				296624B32C53A40F00F8FBE6 /* Preview Content */,
 				296624D82C53C78600F8FBE6 /* NetworkManager.swift */,
@@ -146,11 +172,9 @@
 		296624C52C53A42500F8FBE6 /* SwiftTestingWatcherWidget */ = {
 			isa = PBXGroup;
 			children = (
+				291CA9282C5E52D900F21624 /* Views */,
+				291CA9272C5E52CC00F21624 /* Widgets */,
 				296624C62C53A42500F8FBE6 /* SwiftTestingWatcherWidgetBundle.swift */,
-				2978AC122C53E77100CAE62C /* SwiftTestingMediumView.swift */,
-				298DB19B2C5E3E3000006D12 /* ContributorsMediumView.swift */,
-				296624C82C53A42500F8FBE6 /* CompactRepoWidget.swift */,
-				296B936F2C56B8FF002CA103 /* ContributorsRepoWidget.swift */,
 				296624CA2C53A42600F8FBE6 /* Assets.xcassets */,
 				296624CC2C53A42600F8FBE6 /* Info.plist */,
 			);

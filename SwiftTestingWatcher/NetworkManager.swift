@@ -40,6 +40,21 @@ class NetworkManager {
             return nil
         }
     }
+    
+    func getContributors(from urlString: String) async throws -> [Contributor] {
+        guard let url = URL(string: urlString) else { throw NetworkError.invalidUrl }
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { throw NetworkError.invalidResponse }
+        
+        do {
+            let codingData = try decoder.decode([Contributor.CodingData].self, from: data)
+            return codingData.map { $0.contributor }
+        } catch {
+            throw NetworkError.invalidData
+        }
+    }
 }
 
 enum NetworkError: Error {
@@ -49,5 +64,5 @@ enum NetworkError: Error {
 }
 
 enum RepoURL {
-    static let swiftTesting = "https://api.github.com/repos/apple/swift-testing"
+    static let swiftTesting = "https://api.github.com/repos/swiftlang/swift-testing"
 }
